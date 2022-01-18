@@ -8,9 +8,9 @@ import geopandas as gpd
 import warnings
 
 #Variables
-url1 = "https://datos.madrid.es/egob/catalogo/202318-0-escuelas-infantiles.json"
-url2 = "https://datos.madrid.es/egob/catalogo/202311-0-colegios-publicos.json" 
-path = "../data/dbo.bicimad_stations.csv"
+    url1 ="https://datos.madrid.es/egob/catalogo/202318-0-escuelas-infantiles.json"
+url2 ="https://datos.madrid.es/egob/catalogo/202311-0-colegios-publicos.json" 
+path ="../data/dbo.bicimad_stations.csv"
 
 #functions to acquire data
 
