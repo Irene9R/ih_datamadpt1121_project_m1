@@ -5,7 +5,6 @@ import requests
 from shapely.geometry import Point
 import geopandas as gpd
 import warnings
-for p_acquisition import acquisition as ac
 
 
 #funtions
