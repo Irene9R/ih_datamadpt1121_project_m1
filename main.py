@@ -12,6 +12,7 @@ from p_analysis import analysis as an
 from p_reporting import reporting as rp
 pd.set_option('display.max_rows', 309)
 pd.set_option('display.max_columns', 7)
+pd.set_option('display.width',1500)
 
 #Variables
 url1 = "https://datos.madrid.es/egob/catalogo/202318-0-escuelas-infantiles.json"
