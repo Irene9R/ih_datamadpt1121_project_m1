@@ -46,4 +46,4 @@ if __name__ == '__main__':
     project1_fdf = pd.DataFrame(columns = ["Place of interest","Place address","BiciMAD station","Station location","Distance"])
     project1_fdf[["Place of interest","Place address","BiciMAD station","Station location","Distance"]] = final_df_complete_version[["title","address.street-address","name","address","distance"]]
     rp.save_data_to_csv (project1_fdf,path2)
-    print ("funciona bien")
+    print (project1_fdf)
