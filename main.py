@@ -14,8 +14,8 @@ from p_reporting import reporting as rp
 #Variables
 url1 = "https://datos.madrid.es/egob/catalogo/202318-0-escuelas-infantiles.json"
 url2 = "https://datos.madrid.es/egob/catalogo/202311-0-colegios-publicos.json"  
-path = "../data/dbo.bicimad_stations.csv"
-path1 = "../data/example2.csv"
+path = "data/dbo.bicimad_stations.csv"
+path1 = "/data/example2.csv"
 
 if __name__ == '__main__':
     #main code
