@@ -5,28 +5,30 @@ import requests
 from shapely.geometry import Point
 import geopandas as gpd
 import warnings
+for p_acquisition import acquisition as ac
+
 
 #funtions
 
 #fuction1
+#Since my dataframes have no columns in common, I opted to create a new column with assign value 1 in both dataframes to merge both dataframes on this column. 
+def add_key_column (df):
+    #function generates a new column "key" with all row values equal 1.
+    df['key'] = int(1)
+    return df['key']
+
+#function2
 def to_mercator(lat, long):
     # transform latitude/longitude data in degrees to pseudo-mercator coordinates in metres
     c = gpd.GeoSeries([Point(lat, long)], crs=4326)
     c = c.to_crs(3857)
     return c
 
-#function2
+#function3
 def apply_mercator_to_df(df):
     #creates a new column in a pandas dataframe by applying to_mercator function to all rows of a given pandas dataframe that has latitude and longitude data columns.
     df['mercator'] = df.apply(lambda df: to_mercator(df['location.latitude'],df['location.longitude']), axis = 1)
     return df['mercator']
-
-#function3
-#Since my dataframes have no columns in common, I opted to create a new column with assign value 1 in both dataframes to merge both dataframes on this column. 
-def add_key_column (df):
-    #function generates a new column "key" with all row values equal 1.
-    df['key'] = int(1)
-    return df['key']
 
 #function4
 def merging_by_column (df_1, df_2,column_name):
