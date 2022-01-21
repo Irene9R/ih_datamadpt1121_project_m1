@@ -42,11 +42,13 @@ def main(arguments):
         imported_final_complete_version_df = ac.data_adquisition_csv(path1)
         print("The list of the <places of interest> in data is: ")
         print(imported_final_complete_version_df["title"])
+        print ("Thanks for using 2Bici4School!!")
     elif arguments.all:
         project1_fdf = ac.data_adquisition_csv(path2)
         user_visual_df = pd.DataFrame(columns = ["Place of interest","Place address","BiciMAD station","Station location","Available Bikes"])
         user_visual_df[["Place of interest","Place address","BiciMAD station","Station location","Available Bikes"]] = project1_fdf[["Place of interest","Place address","BiciMAD station","Station location","Available Bikes"]]
         print (user_visual_df)
+        print ("Thanks for using 2Bici4School!!")
     elif arguments.single_option:
         project1_fdf = ac.data_adquisition_csv(path2)
         user_visual_df = pd.DataFrame(columns = ["Place of interest","Place address","BiciMAD station","Station location","Available Bikes"])
@@ -55,12 +57,15 @@ def main(arguments):
         print ("The closest Bicimad station to", place_of_interest,"is: ")
         print (user_visual_df.loc[user_visual_df['Place of interest'] ==place_of_interest])
         webbrowser.open(project1_fdf[project1_fdf['Place of interest'] ==place_of_interest]['URL google maps'].values[0],new=2)
+        print ("Thanks for using 2Bici4School!!")
     elif arguments.information_BiciMad:
         webbrowser.open("https://www.bicimad.com/index.php?s=preguntas", new=2)
+        print ("Thanks for using 2Bici4School!!")
     elif arguments.BiciMad_stations_map:
         webbrowser.open("https://mynavega.emtmadrid.es/MapViewer/?state={%22visibleLayers%22%3A{%22Movilidad_8158%22%3A[]}%2C%22center%22%3A%22-412623%2C4926545%2C102100%22%2C%22level%22%3A6}",new=2)  
+        print ("Thanks for using 2Bici4School!!")
     else:
-        print ("incorrect command, review help command -h")  
+        print ("incorrect or no command entered, please review the help command for all options available -h")  
 
 if __name__ == '__main__':
     arguments = argument_parser()
