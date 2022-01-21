@@ -11,10 +11,10 @@ import warnings
 
 #fuction1
 #Since my dataframes have no columns in common, I opted to create a new column with assign value 1 in both dataframes to merge both dataframes on this column. 
-def add_key_column (df):
-    #function generates a new column "key" with all row values equal 1.
-    df['key'] = int(1)
-    return df['key']
+def add_int_value_column (df,column_name,int_value):
+    #function generates a new column with all row values equal to a given int value
+    df[column_name] = int(int_value)
+    return df[column_name]
 
 #function2
 def to_mercator(lat, long):
@@ -55,3 +55,15 @@ def filtering_closest_bicimad_station_to_place_of_interest(df):
     total_groupby_df_windex = total_groupby_df.reset_index(drop = False)
     final_complete_df = total_groupby_df_windex.merge(df,how="left")
     return final_complete_df
+
+#function8
+def direction_converter_for_google_maps(df,column_to_convert,new_column_name):
+    #converts column data into data readable for google maps
+    df[new_column_name] = df[column_to_convert].str.replace(" ","+")
+    return df[new_column_name]
+
+#function9
+
+
+
+#function10
