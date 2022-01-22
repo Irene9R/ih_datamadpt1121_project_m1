@@ -38,6 +38,7 @@ if __name__ == '__main__':
     bicimad_filtered_df = wr.filtering_BiciMad_stations_by_bike_availability(bicimad_cleaned_df,'dock_bikes')
 
     #analysis
+    print ("I'm working on your request ... this might take some seconds")
     an.add_int_value_column (places_of_interest_df,"key",1)  #I add a "key" column in both dataframes for merging purposes
     an.add_int_value_column (bicimad_filtered_df,"key",1)
     an.apply_mercator_to_df(bicimad_filtered_df)
