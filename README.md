@@ -80,6 +80,7 @@ This API is used to get the datasets of the Public Schools and Preschools in Mad
 ## **Future improvements** #
 - Add several more datasets of the [API REST from Portal de datos abiertos del Ayuntamiento de Madrid] into the project.
 - Add more useful information about the "place of interest" to display to the user. 
+- Improve user error handling like FuzzyWuzzy.
 
 ## GO GET YOUR BIKE AND HAVE A GOOD RIDE!!!
 ![Image](https://i.makeagif.com/media/1-26-2015/VoK2OW.gif)
