@@ -54,4 +54,4 @@ if __name__ == '__main__':
     project1_fdf = pd.DataFrame(columns = ["Place of interest","Place address","BiciMAD station","Station location","Distance","Available Bikes","URL google maps"])
     project1_fdf[["Place of interest","Place address","BiciMAD station","Station location","Distance","Available Bikes","URL google maps"]] = final_df_complete_version[["title","address.street-address","name","address","distance","dock_bikes","url_google_maps"]]
     rp.save_data_to_csv (project1_fdf,path2)
-    print ("Come back soon for the lastest data on Bicimad stations availability!")
+    print ("The information have been downloaded successfully as a csv file in your data folder. Come back soon for the lastest data on Bicimad stations availability!")

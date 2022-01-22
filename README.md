@@ -36,6 +36,18 @@ This API is used to get the datasets of the Public Schools and Preschools in Mad
 - [webbrowser](https://docs.python.org/es/3/library/webbrowser.html)
 - [Argparse](https://docs.python.org/3.7/library/argparse.html)
 
+## **How to access 2Bici4School**  
+1. Enter your terminal and access the directory in which you saved the app.
+2. Run in your terminal the file *main.py* with the following command:  
+>python main.py
+3. After some seconds, you will see the following message on your terminal:  
+>"The information have been downloaded successfully as a csv file in your data folder. Come back soon for the lastest data on Bicimad stations availability!"  
+
+4. Now you are all set to run **2Bici4School.py**. Please read the --help option by typing in your terminal the following command:  
+>python 2Bici4School -h
+
+
+
 ## **Methodology** #
 1. **Connecting to the API REST of Portal de datos abiertos del Ayuntamiento de Madrid** to get the datasets with the *name, address, latitude and longitude* of every **Preeschool and Public School** in Madrid.  
 
