@@ -8,6 +8,7 @@ import geopandas as gpd
 import webbrowser
 import warnings
 import argparse
+import time
 
 pd.set_option('display.max_rows', 309)
 pd.set_option('display.max_columns', 7)
@@ -56,6 +57,7 @@ def main(arguments):
         place_of_interest = str(input("Please enter the education center from which you would like to calculate the closest Bicimad station: "))
         print ("The closest Bicimad station to", place_of_interest,"is: ")
         print (user_visual_df.loc[user_visual_df['Place of interest'] ==place_of_interest])
+        time.sleep(9)
         webbrowser.open(project1_fdf[project1_fdf['Place of interest'] ==place_of_interest]['URL google maps'].values[0],new=2)
         print ("Thanks for using 2Bici4School!!")
     elif arguments.information_BiciMad:
